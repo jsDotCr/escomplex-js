@@ -2,10 +2,10 @@
 
 [![Build status][ci-image]][ci-status]
 
-**NOTE: This project is no longer maintained. If you're interested in taking ownership, please contact me.**
+JavaScript wrapping library for [escomplex].
 
-JavaScript wrapping library
-for [escomplex].
+## Notes from the jsdotcr/escomplex-js fork
+This forks comes with the shiny _espree_ parser installed. Which means: ES6, folks!
 
 [ci-image]: https://secure.travis-ci.org/philbooth/escomplex-js.png?branch=master
 [ci-status]: http://travis-ci.org/#!/philbooth/escomplex-js
