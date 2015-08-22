@@ -67,7 +67,7 @@ function analyseSources (sources, options) {
         try {
             return {
                 path: source.path,
-                ast: getSyntaxTree(source.code)
+                ast: getSyntaxTree(source.code, options)
             };
         } catch (error) {
             error.message = source.path + ': ' + error.message;
@@ -76,8 +76,11 @@ function analyseSources (sources, options) {
     }), options);
 }
 
-function getSyntaxTree (source) {
-    return espree.parse(source, { loc: true, ecmaFeatures: exports.ecmaFeatures });
+function getSyntaxTree (source, options) {
+    options = options || {
+        ecmaFeatures: exports.ecmaFeatures
+    };
+    return espree.parse(source, { loc: true, ecmaFeatures: options.ecmaFeatures });
 }
 
 function performAnalysis (ast, options) {
@@ -85,6 +88,6 @@ function performAnalysis (ast, options) {
 }
 
 function analyseSource (source, options) {
-    return performAnalysis(getSyntaxTree(source), options);
+    return performAnalysis(getSyntaxTree(source, options), options);
 }
 

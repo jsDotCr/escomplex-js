@@ -23,7 +23,7 @@ suite('index:', function () {
             parse: spooks.fn({
                 name: 'espree.parse',
                 log: log,
-                result: 'espree.parse result'
+                results: ['espree.parse result']
             })
         });
         mockery.registerMock('escomplex-ast-moz', walker);
@@ -31,7 +31,7 @@ suite('index:', function () {
             analyse: spooks.fn({
                 name: 'escomplex.analyse',
                 log: log,
-                result: 'escomplex.analyse result'
+                results: ['escomplex.analyse result']
             })
         });
     });

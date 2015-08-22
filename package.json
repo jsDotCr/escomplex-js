@@ -25,17 +25,17 @@
     "esprima"
   ],
   "dependencies": {
-    "check-types": "2.1.x",
-    "escomplex": "0.2.5",
+    "check-types": "3.3.x",
+    "escomplex": "1.2.0",
     "escomplex-ast-moz": "0.1.x",
-    "espree": "^1.6.0"
+    "espree": "^2.2.4"
   },
   "devDependencies": {
-    "jshint": "2.5.x",
-    "mocha": "2.0.x",
-    "chai": "1.10.x",
+    "jshint": "2.8.x",
+    "mocha": "2.2.x",
+    "chai": "3.2.x",
     "mockery": "1.4.x",
-    "spooks": "0.5.x"
+    "spooks": "2.0.x"
   },
   "scripts": {
     "lint": "./node_modules/jshint/bin/jshint src --config config/jshint.json",
