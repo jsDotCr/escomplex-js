@@ -1,44 +1,45 @@
 {
-  "name": "escomplex-js",
-  "version": "0.1.4",
-  "description": "Javascript wrapping library for escomplex.",
-  "homepage": "https://github.com/philbooth/escomplex-js",
-  "bugs": "https://github.com/philbooth/escomplex-js/issues",
-  "license": "MIT",
-  "author": "Phil Booth <pmbooth@gmail.com> (https://github.com/philbooth)",
-  "main": "./src",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/philbooth/escomplex-js.git"
-  },
-  "keywords": [
-    "escomplex",
-    "complexity",
-    "simplicity",
-    "cyclomatic",
-    "halstead",
-    "maintainability",
-    "dependencies",
-    "static",
-    "analysis",
-    "metrics",
-    "esprima"
-  ],
-  "dependencies": {
-    "check-types": "3.3.x",
-    "escomplex": "1.2.0",
-    "escomplex-ast-moz": "0.1.x",
-    "espree": "^2.2.4"
-  },
-  "devDependencies": {
-    "jshint": "2.8.x",
-    "mocha": "2.2.x",
-    "chai": "3.2.x",
-    "mockery": "1.4.x",
-    "spooks": "2.0.x"
-  },
-  "scripts": {
-    "lint": "./node_modules/jshint/bin/jshint src --config config/jshint.json",
-    "test": "./node_modules/mocha/bin/mocha --ui tdd --reporter spec --colors test"
-  }
+    "name": "escomplex-js",
+    "version": "1.2.0",
+    "description": "Javascript wrapping library for escomplex.",
+    "homepage": "https://github.com/philbooth/escomplex-js",
+    "bugs": "https://github.com/philbooth/escomplex-js/issues",
+    "license": "MIT",
+    "author": "Phil Booth <pmbooth@gmail.com> (https://github.com/philbooth)",
+    "main": "./src",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/philbooth/escomplex-js.git"
+    },
+    "keywords": [
+        "escomplex",
+        "complexity",
+        "simplicity",
+        "cyclomatic",
+        "halstead",
+        "maintainability",
+        "dependencies",
+        "static",
+        "analysis",
+        "metrics",
+        "esprima"
+    ],
+    "dependencies": {
+        "check-types": "3.3.x",
+        "escomplex": "1.2.0",
+        "escomplex-ast-moz": "0.1.x",
+        "espree": "^2.2.4"
+    },
+    "devDependencies": {
+        "jshint": "2.8.x",
+        "mocha": "2.2.x",
+        "chai": "3.2.x",
+        "mockery": "1.4.x",
+        "spooks": "2.0.x"
+    },
+    "scripts": {
+        "lint": "./node_modules/jshint/bin/jshint src --config config/jshint.json",
+        "test": "./node_modules/mocha/bin/mocha --ui tdd --reporter spec --colors test"
+    }
 }
+

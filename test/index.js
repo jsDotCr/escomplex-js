@@ -163,6 +163,33 @@ suite('index:', function () {
             });
         });
 
+        suite('array source with bad code:', function() {
+            var code;
+
+            setup(function () {
+                mockery.deregisterMock('esprima');
+                mockery.disable();
+                code = [ { path: '/foo.js', code: 'foo foo' }, { path: '../bar.js', code: '"bar";' } ];
+                index = require(modulePath);
+            });
+
+            teardown(function () {
+                code = undefined;
+            });
+
+            test('throws an error with default options', function() {
+                assert.throws(function() {
+                    index.analyse(code, {});
+                }, '/foo.js: Line 1: Unexpected identifier');
+            });
+
+            test('swallows error with options.ignoreErrors', function() {
+                assert.doesNotThrow(function() {
+                    index.analyse(code, { ignoreErrors: true });
+                });
+            });
+        });
+
         suite('string source:', function () {
             var options, result;
 
